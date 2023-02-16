@@ -31,7 +31,7 @@ defmodule Certstream.CertifcateBuffer do
 
     Agent.update(__MODULE__, fn state ->
       state = certificates ++ state
-      state |> Enum.take(25)
+      state |> Enum.take(500)
     end)
   end
 
